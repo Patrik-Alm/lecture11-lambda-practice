@@ -52,10 +52,19 @@ public class ProductApp {
 
     // Task 3 print out all products that have a price above 100 AND lower than 150
 
-        Action action3 = (Product p) -> System.out.println(p.toString());
+        /* Action action3 = (Product p) -> System.out.println(p.toString());
         Conditional condition3 = (Product p) -> 100 < p.getPrice() && p.getPrice() < 150;
 
-        singleOutProducts(products, condition3, action3);
+        singleOutProducts(products, condition3, action3); */
+
+    // Task 4 increase the price of all products that have a stock value of less than 10 AND above 0 by 50%
+
+        Action action4 = (p) -> p.setPrice(p.getPrice()*1.5);
+        Conditional condition4 = (p) -> p.getStock() != 0 && p.getStock() < 10;
+
+        singleOutProducts(products, condition4, action4);
+
+        System.out.println(products.toString());
 
 
 
