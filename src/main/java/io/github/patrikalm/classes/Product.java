@@ -16,8 +16,9 @@ public class Product {
 
     public String toString(Product product) {
 
-        return product.toString();
-
+        return "Product name: " + productName + "/n"
+                + "Price: " + price + "/n"
+                + "Stock: " + stock;
     }
 
 
