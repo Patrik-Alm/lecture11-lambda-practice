@@ -34,21 +34,24 @@ public class ProductApp {
         products.add(new Product("Iphone 13", 5600.00, 25));
         products.add(new Product("Iphone 16", 10000.00, 25));
         products.add(new Product("Book of Apples History", 1500.00, 5));
-        products.add(new Product("Iphone 6s", 100.00, 0));
-        products.add(new Product("Iphone 7", 120.00, 7));
-        products.add(new Product("Iphone SE", 120.00, 0));
-        products.add(new Product("Iphone 8", 150.00, 5));
-        products.add(new Product("Iphone 13", 5600.00, 25));
-        products.add(new Product("Iphone 16", 10000.00, 25));
-        products.add(new Product("Book of Apples History", 1500.00, 5));
+
 
     //Task 1 print out all products that have stock value 0
 
-        Action action = (Product p) -> System.out.println(p.toString());
+        /* Action action1 = (Product p) -> System.out.println(p.toString());
+        Conditional condition1 = (Product p) -> p.getStock() == 0;
 
-        Conditional condition = (Product p) -> p.getStock() == 0;
+        singleOutProducts(products, condition1, action1); */
 
-        singleOutProducts(products, condition, action);
+    // Task 2 print out the productName of all the products that starts with B
+
+        Action action2 = (Product p) -> System.out.println("Product name: " + p.getProductName());
+        Conditional conditional2 = (Product p) -> p.getProductName().startsWith("B");
+
+        singleOutProducts(products, conditional2, action2);
+
+
+
 
     }
 }
