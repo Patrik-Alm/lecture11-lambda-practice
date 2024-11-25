@@ -45,11 +45,17 @@ public class ProductApp {
 
     // Task 2 print out the productName of all the products that starts with B
 
-        Action action2 = (Product p) -> System.out.println("Product name: " + p.getProductName());
-        Conditional conditional2 = (Product p) -> p.getProductName().startsWith("B");
+       /* Action action2 = (Product p) -> System.out.println("Product name: " + p.getProductName());
+        Conditional condition2 = (Product p) -> p.getProductName().startsWith("B");
 
-        singleOutProducts(products, conditional2, action2);
+        singleOutProducts(products, condition2, action2); */
 
+    // Task 3 print out all products that have a price above 100 AND lower than 150
+
+        Action action3 = (Product p) -> System.out.println(p.toString());
+        Conditional condition3 = (Product p) -> 100 < p.getPrice() && p.getPrice() < 150;
+
+        singleOutProducts(products, condition3, action3);
 
 
 
