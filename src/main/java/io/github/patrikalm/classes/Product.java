@@ -13,14 +13,13 @@ public class Product {
         this.price = price;
         this.stock = stock;
     }
+    @Override
+    public String toString() {
 
-    public String toString(Product product) {
-
-        return "Product name: " + productName + "/n"
-                + "Price: " + price + "/n"
+        return "Product name: " + productName + ", "
+                + "Price: " + price + ", "
                 + "Stock: " + stock;
     }
-
 
 
     public String getProductName() {
